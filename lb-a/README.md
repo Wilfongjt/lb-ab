@@ -1,0 +1,31 @@
+# lb-a
+
+## Build Setup
+
+```bash
+# install dependencies
+$ npm install
+
+# serve with hot reload at localhost:3000
+$ npm run dev
+
+# build for production and launch server
+$ npm run build
+$ npm run start
+
+# generate static project
+$ npm run generate
+```
+
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+# lb-b
+Change port in config/index.js
+
+# hapi-api
+
+# Progression
+* Standalone lb-a
+  - runs but doesnt have connection to lb-hapi
+* Standalone lb-hapi
+  - runs and has swagger page

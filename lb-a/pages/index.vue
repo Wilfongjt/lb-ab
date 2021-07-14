@@ -20,9 +20,20 @@
         <li>Support for the experimental syntax 'jsx' isn't currently enabled</li>
         <li>npm install --save-dev @babel/plugin-syntax-jsx</li>
         <li>  "plugins": ["@babel/plugin-syntax-jsx","@babel/plugin-transform-runtime"]</li>
+        <li></li>
+
         <li> Warning: heroku update available from 7.54.1 to 7.56.1.</li>
+        <li></li>
+        <li>lb-a</li>
         <li>Create hapi api without bablel ES6</li>
-        <li>force push</li>
+
+        <li>Rebuild lb-ab from scratch</li>
+        <li>Setup Actions</li>
+        <li>Configure github secret HEROKU_API_KEY</li>
+        <li></li>
+        <li>lb-b</li>
+        <li>hapi</li>
+        <li></li>
       </ul>
 
       <div class="links">

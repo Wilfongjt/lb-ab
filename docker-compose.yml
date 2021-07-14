@@ -1,0 +1,36 @@
+version: '3'
+services:
+  lb-a:
+    image: wilfongjt/lb-a
+    build:
+      context: ./lb-a
+    command: >
+      bash -c "npm install && npm install nodemon && npm run dev"
+    volumes:
+      - ./lb-a:/usr/src
+    ports:
+      - 3000:3000
+    environment:
+      - NODE_ENV=${NODE_ENV}
+      - LB_ENV=development
+      - LB_A_PORT=${LB_A_PORT}
+      - LB_HAPI=${HAPI_URL}
+      - HAPI_URL=http://${HAPI_HOST}:${HAPI_PORT}
+    links:
+      - lb-b:lb-b
+
+  lb-b:
+    image: wilfongjt/lb-b
+    build:
+      context: ./lb-b
+    command: >
+      sh -c "npm install && npm install nodemon && npm run dev"
+    volumes:
+      - ./lb-b:/usr/src/api
+    ports:
+      - 5555:5555
+    environment:
+      - NODE_ENV=${NODE_ENV}
+      - HAPI_PORT=${HAPI_PORT}
+      - HAPI_HOST=${HAPI_HOST}
+

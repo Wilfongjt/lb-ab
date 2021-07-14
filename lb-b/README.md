@@ -10,20 +10,20 @@ Goal: Create an node API deployed to Heroku
         * Setup JOI validation
         * Setup Jest testing
     * Configure docker-compose for lb-b
-        * Use Swagger to check configuration  (http://0.0.0.0:5555/documentation) 
+        * Use Swagger to check configuration  (http://0.0.0.0:5555/documentation)
     * Commit to  Git repository
-    
-    * Setup Heroku for lb-b 
-    * Create heroku app (one time) 
- 
+
+    * Setup Heroku for lb-b
+    * Create heroku app (one time)
+
     * Create heroku app lb-b
     * Configure heroku settings, HOST 0.0.0.0    
     * Configure GitHub Actions for lb-b
     * Configure Actions secret.HEROKU_API_KEY=<your heroku key>
-    
+
 
 * Commit lb-ab to repo
-* 
+* Open https://lb-b.herokuapp.com/documentation
 
 
 ## Development Environment
@@ -115,12 +115,23 @@ services:
       environment:
         - NODE_ENV=${NODE_ENV}
         - HAPI_PORT=${HAPI_PORT}
-        
+
 
 ```
 
 GitHub Actions
-ci-ab.yml
+* [ci-ab.yml](.github/workflow/ci-ab.yml)
+
+Swagger on Heroku
+```
+open -a safari https://lb-b.herokuapp.com/documentation
 ```
 
+CORS
+* setup CORS in handler option of route (eg. lib/routes/salutation_route.js)
+```
+  cors: {
+    origin:["*"],
+    headers:['Accept', 'Authorization', 'Content-Type', 'If-None-Match', 'Content-Profile']
+  }
 ```

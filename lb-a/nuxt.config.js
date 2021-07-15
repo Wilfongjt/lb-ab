@@ -35,8 +35,16 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
+    '@nuxtjs/dotenv',
+    // Doc: https://axios.nuxtjs.org/usage
+    '@nuxtjs/axios'
   ],
-
+  /*
+  ** Axios module configuration
+  ** See https://axios.nuxtjs.org/options
+  */
+  axios: {
+  },
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
   }

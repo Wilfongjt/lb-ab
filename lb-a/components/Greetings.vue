@@ -7,6 +7,12 @@
       change to show heroku review deploy
     </div>
     <div>
+      does the branch have to be there for review?
+    </div>
+    <div>
+      fix review configuration environment variables?
+    </div>
+    <div>
       <input id="username" v-model="greetingform.username" placeholder="name">
     </div>
 

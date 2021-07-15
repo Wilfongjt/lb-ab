@@ -90,7 +90,6 @@ export default {
       /* eslint-enable no-console */
     },
     onGreeting () {
-      console.log('apiUrl', this.apiUrl);
       this.apiHandlers.apiSalutation(this.apiUrl, this.apiHeader, this.apiBody['username'])
         .then((response) => {
           if (response.status === 200) {

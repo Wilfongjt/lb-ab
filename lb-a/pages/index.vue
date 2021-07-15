@@ -2,39 +2,12 @@
   <div class="container">
     <div>
       <Logo />
+
       <h1 class="title">
         lb-a
       </h1>
 
-      <ul>
-        <li>run default nuxtjs</li>
-
-        <li>configure nuxt.config.js, add  server: {
-           port: process.env.PORT || 3000 // default: localhost
-        }</li>
-
-        <li>Heroku Settings: HOST 0.0.0.0</li>
-
-        <li>hapi-api ... install npm install --save-dev @babel/preset-react in package.json</li>
-        <li>.babelrc ... "presets": ["@babel/preset-react","@babel/preset-env"]</li>
-        <li>Support for the experimental syntax 'jsx' isn't currently enabled</li>
-        <li>npm install --save-dev @babel/plugin-syntax-jsx</li>
-        <li>  "plugins": ["@babel/plugin-syntax-jsx","@babel/plugin-transform-runtime"]</li>
-        <li></li>
-
-        <li> Warning: heroku update available from 7.54.1 to 7.56.1.</li>
-        <li></li>
-        <li>lb-a</li>
-        <li>Create hapi api without bablel ES6</li>
-
-        <li>Rebuild lb-ab from scratch</li>
-        <li>Setup Actions</li>
-        <li>Configure github secret HEROKU_API_KEY</li>
-        <li></li>
-        <li>lb-b</li>
-        <li>hapi</li>
-        <li></li>
-      </ul>
+      <Greetings />
 
       <div class="links">
         <a

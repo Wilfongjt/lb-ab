@@ -8,15 +8,24 @@ class ApiHandlers {
     // component is the nuxt component
     this.component = component
   }
-  async apiSalutaion (apiURL, apiHeader, apiBody) {
+  async apiSalutation (apiURL, apiHeader, apiUsername) {
+    
     const response = await this.component.$axios({
-      url: apiURL,
-      method: 'post',
-      headers: apiHeader,
-      data: apiBody })
+      url: `${apiURL}/${apiUsername}`,
+      method: 'get',
+      headers: apiHeader })
     return response
   }
-
+/*
+async apiSalutation (apiURL, apiHeader, apiBody) {
+  const response = await this.component.$axios({
+    url: apiURL,
+    method: 'post',
+    headers: apiHeader,
+    data: apiBody })
+  return response
+}
+*/
 }
 
 export { ApiHandlers }

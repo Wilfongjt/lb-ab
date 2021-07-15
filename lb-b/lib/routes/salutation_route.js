@@ -42,7 +42,7 @@ module.exports = {
     },
     cors: {
       origin:["*"],
-      headers:['Accept', 'Authorization', 'Content-Type', 'If-None-Match', 'Content-Profile']
+      headers:['Accept', 'Authorization', 'Access-Control-Allow-Origin', 'Content-Type', 'If-None-Match', 'Content-Profile']
     },
   }
 };

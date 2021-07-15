@@ -22,10 +22,35 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 # lb-b
 Change port in config/index.js
 
-# hapi-api
 
 # Progression
 * Standalone lb-a
   - runs but doesnt have connection to lb-hapi
 * Standalone lb-hapi
   - runs and has swagger page
+
+
+UI Framework
+```
+npx create-nuxt-app lb-a
+```
+
+Development Environment
+```
+npm install dotenv
+```
+
+API Framework
+```
+npm install @nuxtjs/axios
+```
+
+Nodemon
+```
+npm install nodemon
+```
+
+Testing
+```
+npm install jest
+```
